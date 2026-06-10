@@ -31,7 +31,7 @@ function loadSong() {
     const song = songs[currentSongIndex];
     songImage.src = song.songImage;
     songName.textContent = song.songName;
-    songArtist.textContent = song.textContent;
+    songArtist.textContent = song.songArtist;
     songAudio.src = song.songAudio;
 
     songAudio.onloadedmetadata = function() {
