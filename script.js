@@ -5,9 +5,9 @@ const seekSlider = document.getElementById("seekRange");
 const songImage = document.getElementById("songImage");
 const songName = document.getElementById("songName");
 const songArtist = document.getElementById("songArtist");
+const songAudio = document.createElement("audio");
 const startTime = document.getElementById("startTime");
 const endTime = document.getElementById("endTime");
-const songAudio = document.createElement("audio");
 let currentSongIndex = 0;
 
 // Array of songs that are being used.
@@ -19,12 +19,13 @@ const songs = [
         songAudio: "./Animal_I_Have_Become.mp3",
     },
     {
-        songImage: "./SR-71.jpeg",
-        songName: "Goodbye",
-        songArtist: "SR-71",
-        songAudio: "",
+        songImage: "./god_of_this_city.jpeg",
+        songName: "God of this City",
+        songArtist: "Chris Tomlin",
+        songAudio: "./ChrisTomlin-GodOfThisCity.mp3",
     }
 ];
+
 
 // Loads the current song along with the songImage, songName, songArtist, and songAudio.
 function loadSong() {
@@ -47,7 +48,7 @@ function loadSong() {
     }
 }
 
-// Previous Button
+// Previous Button operator
 prevButton.addEventListener("click", function() {
     if(currentSongIndex > 0) {
         currentSongIndex--;
@@ -68,7 +69,7 @@ playButton.addEventListener("click", function() {
     }
 });
 
-// Next Button
+// Next Button operator
 nextButton.addEventListener("click", function() {
     if(currentSongIndex < songs.length - 1) {
         currentSongIndex++;
@@ -81,7 +82,7 @@ nextButton.addEventListener("click", function() {
 // SongSlider to adjust the songs limit
 seekSlider.addEventListener("input", function() {
     songAudio.currentTime = seekSlider.value;
-})
+});
 
 // Audio that plays the song and updates the song's time limit.
 songAudio.addEventListener("timeupdate", function() {
