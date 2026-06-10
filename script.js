@@ -79,7 +79,7 @@ nextButton.addEventListener("click", function() {
     }
 })
 
-// SongSlider to adjust the songs limit
+// SongSlider to adjust the songs limit.
 seekSlider.addEventListener("input", function() {
     songAudio.currentTime = seekSlider.value;
 });
