@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b1b182eb96.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>MusicPlayer</title>
+</head>
+<body>
+    
+    <h1>Music Player</h1>
+
+    <div class="musicPlayer">
+        <img id="songImage" src="./sr-71.jpeg"></img>
+        <div id="songName">Song Name</div>
+        <div id="songArtist">Artist Name</div>
+        <span id="startTime">00:00</span>
+        <input type="range" id="seekRange" min="0" max="NaN">
+        <span id="endTime">00:00</span>
+    </div>
+
+    <div class="controls">
+    <i class="fa-solid fa-backward" id="previousSong"></i>
+    <i class="fa-solid fa-play" id="playSong"></i>
+    <i class="fa-solid fa-forward" id="nextSong"></i>
+    <i class="fa-solid fa-repeat" id="repeatSong"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
